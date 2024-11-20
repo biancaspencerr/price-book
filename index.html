@@ -6,263 +6,65 @@
     <title>Pricing Form</title>
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&display=swap"
-      rel="stylesheet"
-    />
   </head>
   <body>
-    <div class="pricing-container">
-      <h1>Price Book</h1>
-      <form class="pricing-form">
-        <div class="form-grid">
-          <!-- Card 1: Economy -->
-          <div class="card">
-            <h2>Economy</h2>
-            <div class="form-row">
-              <label for="type-1">Type</label>
-              <select id="type-1">
-                <option value="Economy">Economy</option>
-              </select>
-            </div>
-            <div class="form-row">
-              <label for="cpu-1">CPU</label>
-              <select id="cpu-1">
-                <option value="cpu-1">2 Cores</option>
-              </select>
-            </div>
-            <div class="form-row">
-              <label for="ram-1">RAM</label>
-              <select id="ram-1">
-                <option value="ram-4gb">4GB</option>
-              </select>
-            </div>
-            <div class="form-row">
-              <label for="storage-1">Storage</label>
-              <select id="storage-1">
-                <option value="storage80">80GB</option>
-              </select>
-            </div>
-            <div class="form-row">
-              <label for="os-1">Operating System</label>
-              <select id="os-1">
-                <option value="All">Windows Server All Versions</option>
-              </select>
-            </div>
-
-            <!-- Addon Options for Economy -->
-            <div class="addon-options" id="addon-options-1">
-              <h3>Choose Addons &mdash; $5 each</h3>
-              <div class="addon-option">
-                <input type="checkbox" id="addon1" name="addon1" />
-                <label for="addon1">2 Factor Authentication</label>
-              </div>
-              <div class="addon-option">
-                <input type="checkbox" id="addon2" name="addon2" />
-                <label for="addon2">VPN</label>
-              </div>
-              <div class="addon-option">
-                <input type="checkbox" id="addon3" name="addon3" />
-                <label for="addon3">Exchange Control Panel</label>
-              </div>
-            </div>
-
-            <div class="total">
-              <p>Total: $<span id="total1">70</span></p>
-            </div>
-          </div>
-
-          <!-- Card 2: Business -->
-          <div class="card">
-            <h2>Business</h2>
-            <div class="form-row">
-              <label for="type-2">Type</label>
-              <select id="type-2">
-                <option value="Business">Business</option>
-              </select>
-            </div>
-            <div class="form-row">
-              <label for="cpu-2">CPU</label>
-              <select id="cpu-2">
-                <option value="cpu-2">2 Cores</option>
-              </select>
-            </div>
-            <div class="form-row">
-              <label for="ram-2">RAM</label>
-              <select id="ram-2">
-                <option value="ram-2">8GB</option>
-              </select>
-            </div>
-            <div class="form-row">
-              <label for="storage-2">Storage</label>
-              <select id="storage-2">
-                <option value="storage120">120GB</option>
-              </select>
-            </div>
-            <div class="form-row">
-              <label for="op-2">Operating System</label>
-              <select id="op-2">
-                <option value="op-2">Windows Servers All Versions</option>
-              </select>
-            </div>
-
-            <!-- Addon Options for Business -->
-            <div class="addon-options" id="addon-options-2">
-              <h3>Choose Addons &mdash; $5 each</h3>
-              <div class="addon-option">
-                <input type="checkbox" id="addon4" name="addon4" />
-                <label for="addon4">2 Factor Authentication</label>
-              </div>
-              <div class="addon-option">
-                <input type="checkbox" id="addon5" name="addon5" />
-                <label for="addon5">VPN</label>
-              </div>
-              <div class="addon-option">
-                <input type="checkbox" id="addon6" name="addon6" />
-                <label for="addon6">Exchange Control Panel</label>
-              </div>
-            </div>
-
-            <div class="total">
-              <p>Total: $<span id="total2">80</span></p>
-            </div>
-          </div>
-
-          <!-- Card 3: Premium -->
-          <div class="card">
-            <h2>Premium</h2>
-            <div class="form-row">
-              <label for="type-3">Type</label>
-              <select id="type-3">
-                <option value="Premium">Premium</option>
-              </select>
-            </div>
-            <div class="form-row">
-              <label for="cpu-3">CPU</label>
-              <select id="cpu-3">
-                <option value="cpu-3">2 Cores</option>
-                <option value="cpu-3">Additional CPU $5 each</option>
-              </select>
-            </div>
-            <div class="form-row">
-              <label for="ram-3">RAM</label>
-              <select id="ram-3">
-                <option value="ram-3">16GB</option>
-              </select>
-            </div>
-            <div class="form-row">
-              <label for="storage-3">Storage</label>
-              <select id="storage-3">
-                <option value="storage250">250GB</option>
-              </select>
-            </div>
-            <div class="form-row">
-              <label for="op-3">Operating System</label>
-              <select id="op-3">
-                <option value="op-3">Windows Servers All Versions</option>
-              </select>
-            </div>
-
-            <!-- Addon Options for Premium -->
-            <div class="addon-options" id="addon-options-3">
-              <h3>Choose Addons &mdash; $5 each</h3>
-              <div class="addon-option">
-                <input type="checkbox" id="addon7" name="addon7" />
-                <label for="addon7">2 Factor Authentication</label>
-              </div>
-              <div class="addon-option">
-                <input type="checkbox" id="addon8" name="addon8" />
-                <label for="addon8">VPN</label>
-              </div>
-              <div class="addon-option">
-                <input type="checkbox" id="addon9" name="addon9" />
-                <label for="addon9">Exchange Control Panel</label>
-              </div>
-            </div>
-
-            <div class="total">
-              <p>Total: $<span id="total3">100</span></p>
-            </div>
-          </div>
-
-          <!-- Card 4: Linux Custom -->
-          <div class="card">
-            <h2>Linux Custom</h2>
-            <div class="form-row">
-              <label for="type-4">Type</label>
-              <select id="type-4">
-                <option value="Custom">Linux Custom</option>
-              </select>
-            </div>
-            <div class="form-row">
-              <label for="cpu4">CPU</label>
-              <select id="cpu4">
-                <option value="4">2 Cores + Linux $10</option>
-                <option value="6">Additional CPU $5 each</option>
-              </select>
-            </div>
-
-            <!-- RAM Calculation -->
-            <div class="form-row">
-              <label for="ram4">RAM (GB) - $1.50 per GB</label>
-              <input
-                type="number"
-                id="ram4"
-                placeholder="Enter GB"
-                oninput="updateRAMPrice()"
-              />
-              <p>Total Price for RAM: $<span id="ramPrice">0</span></p>
-            </div>
-
-            <!-- Storage Calculation -->
-            <div class="form-row">
-              <label for="s4">Storage (GB) - $0.10 per GB</label>
-              <input
-                type="number"
-                id="s4"
-                placeholder="Enter GB"
-                oninput="updateStoragePrice()"
-              />
-              <p>Total Price for Storage: $<span id="storagePrice">0</span></p>
-            </div>
-
-            <!-- Public IP Address Calculation -->
-            <div class="form-row">
-              <label for="ip">Public IP Addresses - $5 each</label>
-              <input
-                type="number"
-                id="ip"
-                placeholder="Enter number of IPs"
-                oninput="updateIPPrice()"
-              />
-              <p>Total Price for Public IPs: $<span id="ipPrice">0</span></p>
-            </div>
-
-            <!-- Addon Options for Linux Custom -->
-            <div class="addon-options" id="addon-options-4">
-              <h3>Choose Addons &mdash; $5 each</h3>
-              <div class="addon-option">
-                <input type="checkbox" id="addon10" name="addon10" />
-                <label for="addon10">2 Factor Authentication</label>
-              </div>
-              <div class="addon-option">
-                <input type="checkbox" id="addon11" name="addon11" />
-                <label for="addon11">VPN</label>
-              </div>
-              <div class="addon-option">
-                <input type="checkbox" id="addon12" name="addon12" />
-                <label for="addon12">Exchange Control Panel</label>
-              </div>
-            </div>
-
-            <div class="total">
-              <p>Total: $<span id="total4">150</span></p>
-            </div>
-          </div>
-        </div>
-      </form>
+    <div class="container group">
+      <div class="grid-1-5">
+        <h2>Basic</h2>
+        <h3><span class="uppercase">Free</span></h3>
+        <p>10,000 monthly visits</p>
+        <ul>
+          <li>Limited Email Support</li>
+          <li>Unlimited Data Transfer</li>
+          <li>10GB Local Storage</li>
+        </ul>
+        <a href="" class="button">Sign Up</a>
+      </div>
+      <div class="grid-1-5">
+        <h2>Startup</h2>
+        <h3><sup>$</sup>79<span class="small">/mo</span></h3>
+        <p>25,000 monthly visits</p>
+        <ul>
+          <li>Limited Email Support</li>
+          <li>Unlimited Data Transfer</li>
+          <li>20GB Local Storage</li>
+        </ul>
+        <a href="" class="button">Sign Up</a>
+      </div>
+      <div class="grid-1-5">
+        <h2>Growth</h2>
+        <h3><sup>$</sup>179<span class="small">/mo</span></h3>
+        <p>75,000 monthly visits</p>
+        <ul>
+          <li>Email Support</li>
+          <li>Unlimited Data Transfer</li>
+          <li>30GB Local Storage</li>
+        </ul>
+        <a href="" class="button">Sign Up</a>
+      </div>
+      <div class="grid-1-5">
+        <h2>Premium</h2>
+        <h3><sup>$</sup>499<span class="small">/mo</span></h3>
+        <p>225,000 monthly visits</p>
+        <ul>
+          <li>Email Support</li>
+          <li>Phone Support</li>
+          <li>Unlimited Data Transfer</li>
+        </ul>
+        <a href="" class="button">Sign Up</a>
+      </div>
+      <div class="grid-1-5">
+        <h2>Enterprise</h2>
+        <h3><span class="uppercase">Let's Talk</span></h3>
+        <p>1M+ monthly visits</p>
+        <ul>
+          <li>Email Support</li>
+          <li>Phone Support</li>
+          <li>Dedicated Environment</li>
+          <li>Customized Plan</li>
+        </ul>
+        <a href="" class="button">Sign Up</a>
+      </div>
     </div>
   </body>
 </html>

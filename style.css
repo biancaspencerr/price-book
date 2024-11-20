@@ -1,149 +1,179 @@
+@import "compass/css3";
+
+@import "compass/css3";
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,900);
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
 body {
-  font-family: "Noto Sans", sans-serif;
-  background-color: #667a8f;
-  margin: 0;
-  padding: 20px;
-}
-
-.pricing-container {
-  width: 80%;
-  margin: 0 auto;
-  text-align: center;
-}
-
-h1 {
-  color: #99a7b4;
-  font-size: 40px;
-  margin-bottom: 40px;
-  font-weight: 400;
-}
-
-.pricing-form {
-  background-color: #667a8f;
-  padding: 50px;
-  border-radius: 20px;
-  width: 100%;
-  max-width: 1400px;
-  margin: 0 auto;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
-}
-
-.form-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Four equal columns for four cards */
-  gap: 40px; /* Increased space between the columns */
-  grid-auto-rows: 1fr; /* Ensures cards are stretched equally in height */
-}
-
-.card {
-  padding: 30px;
-  font-weight: 400;
-  border-radius: 8px;
-  color: #333;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background-color: #8091a2;
-  min-height: 400px; /* Set a minimum height to prevent collapsing */
-  box-sizing: border-box;
-}
-
-.card h2 {
-  margin-bottom: 20px;
-  color: #99a7b4;
-  font-size: 1.5rem;
-}
-
-.form-row {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 25px;
-}
-
-.form-row label {
-  margin-bottom: 0.5rem;
-  display: block;
-  font-weight: 400;
+  background-color: rgb(33, 31, 35);
+  background-repeat: no-repeat;
+  @include filter-gradient(#53455b, #201e22, horizontal);
+  @include background-image(
+    radial-gradient(
+      circle at top,
+      rgba(83, 69, 91, 1) 0,
+      rgba(32, 30, 34, 1) 70%
+    )
+  );
   color: #fff;
-  font-size: 1.6rem;
-  line-height: 1.8;
+  font-family: "Lato", sans-serif;
+  font-size: 100%;
+  min-height: 100%;
+  line-height: 1.5;
+  padding: 2.5em 0;
 }
-
-select {
-  width: 100%; /* Ensure the select element takes up full width of its container */
-  padding: 1rem;
-  font-size: 1.2rem;
-  height: 30px;
-  background-color: #fff;
-  color: #333333d0;
-  border: none;
-  border-radius: 5px;
-  line-height: 1.8;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-  box-sizing: border-box;
+.container {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1200px;
 }
-
-.total {
-  margin-top: 30px;
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
 }
+.grid-1-5 {
+  border: 2px solid #5d4e65;
+  min-height: 400px;
+  padding: 1.25em;
+  position: relative;
+  text-align: center;
+  transition: all 0.2s ease-in-out;
 
-.total p {
-  font-size: 20px;
-  font-weight: bold;
-  color: #002244;
-}
-
-.addon-options {
-  background-color: #f9f9f9;
-  padding: 20px;
-  border-radius: 8px;
-  margin-top: 30px;
-}
-
-.addon-options h3 {
-  font-size: 1.2rem;
-  margin-bottom: 15px;
-  color: #99a7b4;
-  font-weight: 500;
-}
-
-.addon-option {
-  display: flex;
-  align-items: center;
-  margin-bottom: 15px;
-}
-
-.addon-option input[type="checkbox"] {
-  margin-right: 10px;
-  width: 20px;
-  height: 20px;
-}
-
-.addon-option label {
-  font-size: 16px;
-  color: #333333d0;
-  cursor: pointer;
-}
-
-.addon-option input[type="checkbox"]:checked + label {
-  font-weight: bold;
-  color: #4caf50;
-}
-
-@media (max-width: 800px) {
-  .pricing-form {
-    padding: 30px;
+  @media screen and (min-width: 700px) {
+    & {
+      float: left;
+      width: 50%;
+    }
+    &:nth-child(odd) {
+      clear: left;
+    }
   }
 
-  .form-grid {
-    grid-template-columns: 1fr; /* Stack the cards vertically on smaller screens */
+  @media screen and (min-width: 800px) {
+    & {
+      width: 33.3333333%;
+    }
+    &:nth-child(3n + 1) {
+      clear: left;
+    }
+    &:nth-child(odd) {
+      clear: none;
+    }
   }
 
-  .card {
-    margin-bottom: 30px;
+  @media screen and (min-width: 1120px) {
+    & {
+      width: 20%;
+    }
+    &:nth-child(odd),
+    &:nth-child(3n + 1) {
+      clear: none;
+    }
   }
 }
+.grid-1-5:hover {
+  background-color: rgb(83, 69, 91);
+  @include filter-gradient(#53455b, #201d22, vertical);
+  @include background-image(
+    linear-gradient(top, rgba(83, 69, 91, 1) 0%, rgba(32, 29, 34, 1) 100%)
+  );
+  border-top: 2px solid #ec7a37;
+  border-bottom: 2px solid #ff4f69;
+  box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 1);
+  transform: scale(1.025);
+  z-index: 2;
 
-label .ip {
-  color: #667a8f;
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    background-color: rgb(246, 125, 53);
+    @include filter-gradient(#f67d35, #ff4f68, vertical);
+    @include background-image(
+      linear-gradient(top, rgba(246, 125, 53, 1) 0%, rgba(255, 79, 104, 1) 100%)
+    );
+    top: -2px;
+    bottom: -2px;
+    width: 2px;
+  }
+
+  &:before {
+    left: -2px;
+  }
+  &:after {
+    right: -2px;
+  }
+
+  & .button {
+    background-color: rgb(238, 122, 54);
+    @include filter-gradient(#ee7a36, #eb495d, horizontal);
+    @include background-image(
+      linear-gradient(left, rgba(238, 122, 54, 1) 0%, rgba(235, 73, 93, 1) 100%)
+    );
+  }
+}
+h2,
+h3,
+p,
+ul {
+  margin: 0;
+}
+h2 {
+  font-size: 1em;
+  font-weight: 400;
+  margin: 0 0 0.5em;
+}
+h3 {
+  font-size: 1.5em;
+  letter-spacing: 0.0625em;
+  margin: 0 0 0.3333333333333333em;
+}
+p {
+  font-size: 0.875em;
+}
+p,
+ul {
+  margin: 0 0 1.5em;
+}
+ul {
+  color: #796583;
+  font-size: 0.75em;
+  list-style-type: none;
+  padding: 0;
+
+  li {
+    margin: 0 0 0.8333333333333333em;
+  }
+}
+.button {
+  background-color: #9c83aa;
+  border-radius: 20px;
+  color: #fff;
+  font-size: 1em;
+  font-weight: 700;
+  padding: 0.75em 1.5em;
+  position: absolute;
+  bottom: 1.25em;
+  left: 50%;
+  margin-left: -60px;
+  text-decoration: none;
+  width: 120px;
+}
+.uppercase,
+.button,
+h2 {
+  text-transform: uppercase;
+}
+sup,
+.small {
+  font-size: 0.6125em;
 }
