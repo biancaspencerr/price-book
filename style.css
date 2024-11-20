@@ -1,5 +1,4 @@
 @import "compass/css3";
-
 @import "compass/css3";
 @import url(https://fonts.googleapis.com/css?family=Lato:400,700,900);
 
@@ -7,11 +6,13 @@ html {
   box-sizing: border-box;
   height: 100%;
 }
+
 *,
 *:before,
 *:after {
   box-sizing: inherit;
 }
+
 body {
   background-color: rgb(33, 31, 35);
   background-repeat: no-repeat;
@@ -26,60 +27,59 @@ body {
   color: #fff;
   font-family: "Lato", sans-serif;
   font-size: 100%;
-  min-height: 100%;
+  min-height: 100vh; /* Full screen height */
   line-height: 1.5;
-  padding: 2.5em 0;
+  display: flex;
+  justify-content: center; /* Horizontally center the container */
+  align-items: center; /* Vertically center the container */
+  padding: 0; /* Remove any unwanted padding */
 }
+
 .container {
   margin: 0 auto;
   width: 90%;
   max-width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Ensure space between cards */
 }
+
 .group:after {
   content: "";
   display: table;
   clear: both;
 }
+
 .grid-1-5 {
   border: 2px solid #5d4e65;
-  min-height: 400px;
-  padding: 1.25em;
-  position: relative;
+  min-height: 500px; /* Increased height */
+  padding: 2em; /* Increased padding */
   text-align: center;
+  position: relative;
   transition: all 0.2s ease-in-out;
+  flex: 1 1 20%; /* Flexbox property for equal size cards */
+  margin-bottom: 30px; /* Add more space between cards */
+  box-sizing: border-box; /* Ensure padding doesn't affect size */
+}
 
-  @media screen and (min-width: 700px) {
-    & {
-      float: left;
-      width: 50%;
-    }
-    &:nth-child(odd) {
-      clear: left;
-    }
-  }
-
-  @media screen and (min-width: 800px) {
-    & {
-      width: 33.3333333%;
-    }
-    &:nth-child(3n + 1) {
-      clear: left;
-    }
-    &:nth-child(odd) {
-      clear: none;
-    }
-  }
-
-  @media screen and (min-width: 1120px) {
-    & {
-      width: 20%;
-    }
-    &:nth-child(odd),
-    &:nth-child(3n + 1) {
-      clear: none;
-    }
+@media screen and (max-width: 1120px) {
+  .grid-1-5 {
+    flex: 1 1 30%; /* Adjust width for medium screens */
   }
 }
+
+@media screen and (max-width: 800px) {
+  .grid-1-5 {
+    flex: 1 1 45%; /* Adjust width for smaller screens */
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .grid-1-5 {
+    flex: 1 1 100%; /* Stack items on small screens */
+  }
+}
+
 .grid-1-5:hover {
   background-color: rgb(83, 69, 91);
   @include filter-gradient(#53455b, #201d22, vertical);
@@ -121,32 +121,38 @@ body {
     );
   }
 }
+
 h2,
 h3,
 p,
 ul {
   margin: 0;
 }
+
 h2 {
-  font-size: 1em;
+  font-size: 1.2em; /* Increased font size */
   font-weight: 400;
   margin: 0 0 0.5em;
 }
+
 h3 {
-  font-size: 1.5em;
+  font-size: 1.8em; /* Increased font size */
   letter-spacing: 0.0625em;
   margin: 0 0 0.3333333333333333em;
 }
+
 p {
-  font-size: 0.875em;
+  font-size: 1em; /* Increased font size */
 }
+
 p,
 ul {
   margin: 0 0 1.5em;
 }
+
 ul {
   color: #796583;
-  font-size: 0.75em;
+  font-size: 0.875em;
   list-style-type: none;
   padding: 0;
 
@@ -154,11 +160,12 @@ ul {
     margin: 0 0 0.8333333333333333em;
   }
 }
+
 .button {
   background-color: #9c83aa;
   border-radius: 20px;
   color: #fff;
-  font-size: 1em;
+  font-size: 1.2em; /* Larger font size for button */
   font-weight: 700;
   padding: 0.75em 1.5em;
   position: absolute;
@@ -166,13 +173,15 @@ ul {
   left: 50%;
   margin-left: -60px;
   text-decoration: none;
-  width: 120px;
+  width: 140px; /* Increased width for button */
 }
+
 .uppercase,
 .button,
 h2 {
   text-transform: uppercase;
 }
+
 sup,
 .small {
   font-size: 0.6125em;
