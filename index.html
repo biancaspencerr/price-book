@@ -9,77 +9,544 @@
   </head>
   <body>
     <div class="container group">
-      <div class="grid-1-4">
+      <!-- Economy Plan -->
+      <div class="grid-1-4" id="economy-plan">
         <h2>Economy Plan</h2>
-        <h3>
+        <h3 id="economy-total">
           <span><sup>$</sup>70</span>
         </h3>
+        <!-- Total Price here -->
         <p>Windows Server All Versions</p>
         <ul class="list">
           <li class="list-item">
-            <ion-icon class="list-icon"  name="checkmark-outline"></ion-icon>2 Cores
+            <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>2
+            Cores
           </li>
           <li class="list-item">
-            <ion-icon class="list-icon"  name="checkmark-outline"></ion-icon>4GB RAM</li>
+            <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>4GB
+            RAM
+          </li>
           <li class="list-item">
-            <ion-icon class="list-icon"  name="checkmark-outline"></ion-icon>80GB Storage</li>
+            <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>80GB
+            Storage
+          </li>
         </ul>
+
+        <div class="addon-options">
+          <h3>Choose Addons</h3>
+
+          <!-- Number of Cores + Linux -->
+          <div class="addon-option">
+            <label for="cpu-economy">2 Cores + Linux -$10 each</label>
+            <input
+              type="number"
+              id="cpu-economy"
+              name="cpu"
+              value="2"
+              min="2"
+              onchange="updateTotal('economy-plan')"
+            />
+          </div>
+
+          <!-- Additional CPUs -->
+          <div class="addon-option">
+            <label for="additionalCpu-economy">Additional CPUs -$5 each</label>
+            <input
+              type="number"
+              id="additionalCpu-economy"
+              name="additionalCpu"
+              value="0"
+              min="0"
+              onchange="updateTotal('economy-plan')"
+            />
+          </div>
+
+          <!-- RAM -->
+          <div class="addon-option">
+            <label for="ram-economy">RAM -$1.50 per GB</label>
+            <input
+              type="number"
+              id="ram-economy"
+              name="ram"
+              value="0"
+              min="0"
+              onchange="updateTotal('economy-plan')"
+            />
+          </div>
+
+          <!-- Storage -->
+          <div class="addon-option">
+            <label for="storage-economy">Storage -$0.10 per GB</label>
+            <input
+              type="number"
+              id="storage-economy"
+              name="storage"
+              value="0"
+              min="0"
+              onchange="updateTotal('economy-plan')"
+            />
+          </div>
+
+          <!-- Public IPs -->
+          <div class="addon-option">
+            <label for="publicIp-economy">Public IPs -$5 each</label>
+            <input
+              type="number"
+              id="publicIp-economy"
+              name="publicIp"
+              value="0"
+              min="0"
+              onchange="updateTotal('economy-plan')"
+            />
+          </div>
+
+          <!-- 2 Factor Authentication -->
+          <div class="addon-option">
+            <label for="twoFactor-economy"
+              >2 Factor Authentication -$5 each</label
+            >
+            <input
+              type="number"
+              id="twoFactor-economy"
+              name="twoFactor"
+              value="0"
+              min="0"
+              onchange="updateTotal('economy-plan')"
+            />
+          </div>
+
+          <!-- VPN -->
+          <div class="addon-option">
+            <label for="vpn-economy">VPN -$5 each</label>
+            <input
+              type="number"
+              id="vpn-economy"
+              name="vpn"
+              value="0"
+              min="0"
+              onchange="updateTotal('economy-plan')"
+            />
+          </div>
+
+          <!-- Exchange Control Panel -->
+          <div class="addon-option">
+            <label for="exchange-economy"
+              >Exchange Control Panel -$5 each</label
+            >
+            <input
+              type="number"
+              id="exchange-economy"
+              name="exchange"
+              value="0"
+              min="0"
+              onchange="updateTotal('economy-plan')"
+            />
+          </div>
+        </div>
         <a href="" class="button">Purchase</a>
-
-
       </div>
-      <div class="grid-1-4">
-        <h2>Business Plan </h2>
-        <h3>
+
+      <!-- Business Plan -->
+      <div class="grid-1-4" id="business-plan">
+        <h2>Business Plan</h2>
+        <h3 id="business-total">
           <span><sup>$</sup>80</span>
         </h3>
+        <!-- Total Price here -->
         <p>Windows Server All Versions</p>
         <ul class="list">
           <li class="list-item">
-            <ion-icon class="list-icon"  name="checkmark-outline"></ion-icon>2 Cores</li>
+            <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>2
+            Cores
+          </li>
           <li class="list-item">
-            <ion-icon class="list-icon"  name="checkmark-outline"></ion-icon>8GB RAM</li>
+            <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>8GB
+            RAM
+          </li>
           <li class="list-item">
-            <ion-icon class="list-icon"  name="checkmark-outline"></ion-icon>120 Storage</li>
+            <ion-icon class="list-icon" name="checkmark-outline"></ion-icon
+            >120GB Storage
+          </li>
         </ul>
+
+        <div class="addon-options">
+          <h3>Choose Addons</h3>
+
+          <!-- Number of Cores + Linux -->
+          <div class="addon-option">
+            <label for="cpu-business">2 Cores + Linux -$10 each</label>
+            <input
+              type="number"
+              id="cpu-business"
+              name="cpu"
+              value="2"
+              min="2"
+              onchange="updateTotal('business-plan')"
+            />
+          </div>
+
+          <!-- Additional CPUs -->
+          <div class="addon-option">
+            <label for="additionalCpu-business">Additional CPUs -$5 each</label>
+            <input
+              type="number"
+              id="additionalCpu-business"
+              name="additionalCpu"
+              value="0"
+              min="0"
+              onchange="updateTotal('business-plan')"
+            />
+          </div>
+
+          <!-- RAM -->
+          <div class="addon-option">
+            <label for="ram-business">RAM -$1.50 per GB</label>
+            <input
+              type="number"
+              id="ram-business"
+              name="ram"
+              value="0"
+              min="0"
+              onchange="updateTotal('business-plan')"
+            />
+          </div>
+
+          <!-- Storage -->
+          <div class="addon-option">
+            <label for="storage-business">Storage -$0.10 per GB</label>
+            <input
+              type="number"
+              id="storage-business"
+              name="storage"
+              value="0"
+              min="0"
+              onchange="updateTotal('business-plan')"
+            />
+          </div>
+
+          <!-- Public IPs -->
+          <div class="addon-option">
+            <label for="publicIp-business">Public IPs -$5 each</label>
+            <input
+              type="number"
+              id="publicIp-business"
+              name="publicIp"
+              value="0"
+              min="0"
+              onchange="updateTotal('business-plan')"
+            />
+          </div>
+
+          <!-- 2 Factor Authentication -->
+          <div class="addon-option">
+            <label for="twoFactor-business"
+              >2 Factor Authentication -$5 each</label
+            >
+            <input
+              type="number"
+              id="twoFactor-business"
+              name="twoFactor"
+              value="0"
+              min="0"
+              onchange="updateTotal('business-plan')"
+            />
+          </div>
+
+          <!-- VPN -->
+          <div class="addon-option">
+            <label for="vpn-business">VPN -$5 each</label>
+            <input
+              type="number"
+              id="vpn-business"
+              name="vpn"
+              value="0"
+              min="0"
+              onchange="updateTotal('business-plan')"
+            />
+          </div>
+
+          <!-- Exchange Control Panel -->
+          <div class="addon-option">
+            <label for="exchange-business"
+              >Exchange Control Panel -$5 each</label
+            >
+            <input
+              type="number"
+              id="exchange-business"
+              name="exchange"
+              value="0"
+              min="0"
+              onchange="updateTotal('business-plan')"
+            />
+          </div>
+        </div>
         <a href="" class="button">Purchase</a>
-
-
       </div>
-      <div class="grid-1-4">
+
+      <!-- Premium Plan -->
+      <div class="grid-1-4" id="premium-plan">
         <h2>Premium Plan</h2>
-        <h3>
+        <h3 id="premium-total">
           <span><sup>$</sup>100</span>
         </h3>
+        <!-- Total Price here -->
         <p>Windows Server All Versions</p>
         <ul class="list">
           <li class="list-item">
-            <ion-icon class="list-icon"  name="checkmark-outline"></ion-icon>2 Cores</li>
+            <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>2
+            Cores
+          </li>
           <li class="list-item">
-            <ion-icon class="list-icon"  name="checkmark-outline"></ion-icon>16GB RAM</li>
+            <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>16GB
+            RAM
+          </li>
           <li class="list-item">
-            <ion-icon class="list-icon"  name="checkmark-outline"></ion-icon>250 Storage</li>
+            <ion-icon class="list-icon" name="checkmark-outline"></ion-icon
+            >250GB Storage
+          </li>
         </ul>
+
+        <div class="addon-options">
+          <h3>Choose Addons</h3>
+
+          <!-- Number of Cores + Linux -->
+          <div class="addon-option">
+            <label for="cpu-premium">2 Cores + Linux -$10 each</label>
+            <input
+              type="number"
+              id="cpu-premium"
+              name="cpu"
+              value="2"
+              min="2"
+              onchange="updateTotal('premium-plan')"
+            />
+          </div>
+
+          <!-- Additional CPUs -->
+          <div class="addon-option">
+            <label for="additionalCpu-premium">Additional CPUs -$5 each</label>
+            <input
+              type="number"
+              id="additionalCpu-premium"
+              name="additionalCpu"
+              value="0"
+              min="0"
+              onchange="updateTotal('premium-plan')"
+            />
+          </div>
+
+          <!-- RAM -->
+          <div class="addon-option">
+            <label for="ram-premium">RAM -$1.50 per GB</label>
+            <input
+              type="number"
+              id="ram-premium"
+              name="ram"
+              value="0"
+              min="0"
+              onchange="updateTotal('premium-plan')"
+            />
+          </div>
+
+          <!-- Storage -->
+          <div class="addon-option">
+            <label for="storage-premium">Storage -$0.10 per GB</label>
+            <input
+              type="number"
+              id="storage-premium"
+              name="storage"
+              value="0"
+              min="0"
+              onchange="updateTotal('premium-plan')"
+            />
+          </div>
+
+          <!-- Public IPs -->
+          <div class="addon-option">
+            <label for="publicIp-premium">Public IPs -$5 each</label>
+            <input
+              type="number"
+              id="publicIp-premium"
+              name="publicIp"
+              value="0"
+              min="0"
+              onchange="updateTotal('premium-plan')"
+            />
+          </div>
+
+          <!-- 2 Factor Authentication -->
+          <div class="addon-option">
+            <label for="twoFactor-premium"
+              >2 Factor Authentication -$5 each</label
+            >
+            <input
+              type="number"
+              id="twoFactor-premium"
+              name="twoFactor"
+              value="0"
+              min="0"
+              onchange="updateTotal('premium-plan')"
+            />
+          </div>
+
+          <!-- VPN -->
+          <div class="addon-option">
+            <label for="vpn-premium">VPN -$5 each</label>
+            <input
+              type="number"
+              id="vpn-premium"
+              name="vpn"
+              value="0"
+              min="0"
+              onchange="updateTotal('premium-plan')"
+            />
+          </div>
+
+          <!-- Exchange Control Panel -->
+          <div class="addon-option">
+            <label for="exchange-premium"
+              >Exchange Control Panel -$5 each</label
+            >
+            <input
+              type="number"
+              id="exchange-premium"
+              name="exchange"
+              value="0"
+              min="0"
+              onchange="updateTotal('premium-plan')"
+            />
+          </div>
+        </div>
         <a href="" class="button">Purchase</a>
-
-
       </div>
-      <div class="grid-1-4">
+
+      <!-- Linux Custom Plan -->
+      <div class="grid-1-4" id="linux-plan">
         <h2>Linux Custom Plan</h2>
-        <h3><sup>$</sup>499</span></h3>
-        <p>225,000 monthly visits</p>
-        <ul class="list">
-          <li class="list-item">
-            <ion-icon class="list-icon"  name="checkmark-outline"></ion-icon>Email Support</li>
-          <li class="list-item">
-            <ion-icon class="list-icon"  name="checkmark-outline"></ion-icon>Phone Support</li>
-          <li class="list-item">
-            <ion-icon class="list-icon"  name="checkmark-outline"></ion-icon>Unlimited Data Transfer</li>
-        </ul class="list">
-        <a href="" class="button">Sign Up</a>
+        <h3 id="linux-total"><sup>$</sup>5</h3>
+        <!-- Total Price here -->
+        <p class="start">starting at</p>
+        <div class="addon-options">
+          <h3>Customize plan</h3>
+
+          <!-- Number of Cores + Linux -->
+          <div class="addon-option">
+            <label for="cpu-linux">2 Cores + Linux -$10 each</label>
+            <input
+              type="number"
+              id="cpu-linux"
+              name="cpu"
+              value="2"
+              min="2"
+              onchange="updateTotal('linux-plan')"
+            />
+          </div>
+
+          <!-- Additional CPUs -->
+          <div class="addon-option">
+            <label for="additionalCpu-linux">Additional CPUs -$5 each</label>
+            <input
+              type="number"
+              id="additionalCpu-linux"
+              name="additionalCpu"
+              value="0"
+              min="0"
+              onchange="updateTotal('linux-plan')"
+            />
+          </div>
+
+          <!-- RAM -->
+          <div class="addon-option">
+            <label for="ram-linux">RAM -$1.50 per GB</label>
+            <input
+              type="number"
+              id="ram-linux"
+              name="ram"
+              value="0"
+              min="0"
+              onchange="updateTotal('linux-plan')"
+            />
+          </div>
+
+          <!-- Storage -->
+          <div class="addon-option">
+            <label for="storage-linux">Storage -$0.10 per GB</label>
+            <input
+              type="number"
+              id="storage-linux"
+              name="storage"
+              value="0"
+              min="0"
+              onchange="updateTotal('linux-plan')"
+            />
+          </div>
+
+          <!-- Public IPs -->
+          <div class="addon-option">
+            <label for="publicIp-linux">Public IPs -$5 each</label>
+            <input
+              type="number"
+              id="publicIp-linux"
+              name="publicIp"
+              value="0"
+              min="0"
+              onchange="updateTotal('linux-plan')"
+            />
+          </div>
+
+          <!-- 2 Factor Authentication -->
+          <div class="addon-option">
+            <label for="twoFactor-linux"
+              >2 Factor Authentication -$5 each</label
+            >
+            <input
+              type="number"
+              id="twoFactor-linux"
+              name="twoFactor"
+              value="0"
+              min="0"
+              onchange="updateTotal('linux-plan')"
+            />
+          </div>
+
+          <!-- VPN -->
+          <div class="addon-option">
+            <label for="vpn-linux">VPN -$5 each</label>
+            <input
+              type="number"
+              id="vpn-linux"
+              name="vpn"
+              value="0"
+              min="0"
+              onchange="updateTotal('linux-plan')"
+            />
+          </div>
+
+          <!-- Exchange Control Panel -->
+          <div class="addon-option">
+            <label for="exchange-linux">Exchange Control Panel -$5 each</label>
+            <input
+              type="number"
+              id="exchange-linux"
+              name="exchange"
+              value="0"
+              min="0"
+              onchange="updateTotal('linux-plan')"
+            />
+          </div>
+        </div>
+        <a href="" class="button">Purchase</a>
       </div>
     </div>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="script.js" defer></script>
   </body>
 </html>

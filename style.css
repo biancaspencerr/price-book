@@ -13,7 +13,6 @@ html {
 
 body {
   background-color: #fff;
-  /* background-image: linear-gradient(to top, #c9e7f0, #e2f2f7); */
   color: #333;
   font-family: "Lato", sans-serif;
   font-size: 100%;
@@ -39,29 +38,26 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: stretch; /* Ensures all items stretch to the same height */
+  align-items: stretch;
 }
 
 .grid-1-4 {
   border: 2px solid #cf2e2e;
-  min-height: 600px; /* Ensures all cards are at least 600px tall */
+  min-height: 600px;
   padding: 1.25em;
   position: relative;
   text-align: center;
   transition: all 0.2s ease-in-out;
-  flex: 1 1 20%; /* Flex-based layout */
-  margin-bottom: 20px; /* Add space between cards */
+  flex: 1 1 20%;
+  margin-bottom: 20px;
   display: flex;
-  flex-direction: column; /* Ensures items inside stretch properly */
-  justify-content: flex-start; /* Aligns content at the top */
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 @media screen and (min-width: 700px) {
   .grid-1-4 {
     width: 50%;
-  }
-  .grid-1-5:nth-child(odd) {
-    clear: left;
   }
 }
 
@@ -69,23 +65,11 @@ body {
   .grid-1-4 {
     width: 33.3333%;
   }
-  .grid-1-4:nth-child(3n + 1) {
-    clear: left;
-  }
-  .grid-1-4:nth-child(odd) {
-    clear: none;
-    min-height: 600px; /* Ensure consistent height on medium screens */
-  }
 }
 
 @media screen and (min-width: 1120px) {
   .grid-1-4 {
     width: 20%;
-  }
-  .grid-1-4:nth-child(odd),
-  .grid-1-4:nth-child(3n + 1) {
-    clear: none;
-    min-height: 700px; /* Ensure consistent height on larger screens */
   }
 }
 
@@ -130,12 +114,11 @@ body {
   text-decoration: none;
   width: fit-content;
   height: fit-content;
-  align-self: center; /* Center the button horizontally */
-  margin-top: auto; /* Pushes button to the bottom */
-  /* Add flexbox to center the text */
-  display: flex; /* Enable flexbox */
-  justify-content: center; /* Horizontally center text */
-  align-items: center; /* Vertically center text */
+  align-self: center;
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .button:hover {
@@ -174,7 +157,7 @@ h3 {
 
 p {
   font-size: 1em;
-  margin: 0 0 2rem; /* Adds space below the paragraph */
+  margin: 0 0 2rem;
 }
 
 p,
@@ -188,16 +171,16 @@ ul {
   display: flex;
   flex-direction: column;
   gap: 1.6rem;
-  padding-left: 0; /* Remove any left padding */
-  margin-left: 0; /* Remove any left margin */
-  margin-top: 2rem; /* Space above the list */
+  padding-left: 0;
+  margin-left: 0;
+  margin-top: 2rem;
   letter-spacing: 1.5;
 }
 
 .list-item {
   display: flex;
-  align-items: center; /* Ensure the icon and text align properly */
-  gap: 0.75em; /* Space between icon and text */
+  align-items: center;
+  gap: 0.75em;
   letter-spacing: 1.5;
 }
 
@@ -206,4 +189,49 @@ ul {
   height: 1.5rem;
   color: #ff6900;
   line-height: 1.2;
+}
+
+.addon-options {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  transition: border-image 0.3s ease;
+}
+
+.addon-options h3 {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #333;
+  font-weight: inherit;
+}
+
+.addon-option {
+  display: flex;
+  flex-direction: column; /* Stack the label above the input */
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+.addon-option label {
+  font-size: 1em;
+  color: #333;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+
+.addon-option input[type="number"] {
+  width: 60px;
+  height: 30px;
+  margin-top: 5px; /* Adds a small gap between label and input */
+}
+
+.addon-options:hover {
+  border-image: linear-gradient(to right, #ff6900, #ffcf00) 1;
+  border-width: 4px;
+}
+
+.start {
+  font-size: small;
 }
