@@ -1,28 +1,28 @@
 function updateTotal(planId) {
   // Fetch the values for each input in the selected plan
-  const cpu = parseInt(document.getElementById(`cpu-${planId}`).value) || 0;
+  const cpu = parseInt(document.getElementById(`${planId}-cpu`).value) || 0;
   const additionalCpu =
-    parseInt(document.getElementById(`additionalCpu-${planId}`).value) || 0;
-  const ram = parseInt(document.getElementById(`ram-${planId}`).value) || 0;
+    parseInt(document.getElementById(`${planId}-additionalCpu`).value) || 0;
+  const ram = parseInt(document.getElementById(`${planId}-ram`).value) || 0;
   const storage =
-    parseInt(document.getElementById(`storage-${planId}`).value) || 0;
+    parseInt(document.getElementById(`${planId}-storage`).value) || 0;
   const publicIp =
-    parseInt(document.getElementById(`publicIp-${planId}`).value) || 0;
+    parseInt(document.getElementById(`${planId}-publicIp`).value) || 0;
   const twoFactor =
-    parseInt(document.getElementById(`twoFactor-${planId}`).value) || 0;
-  const vpn = parseInt(document.getElementById(`vpn-${planId}`).value) || 0;
+    parseInt(document.getElementById(`${planId}-twoFactor`).value) || 0;
+  const vpn = parseInt(document.getElementById(`${planId}-vpn`).value) || 0;
   const exchange =
-    parseInt(document.getElementById(`exchange-${planId}`).value) || 0;
+    parseInt(document.getElementById(`${planId}-exchange`).value) || 0;
 
-  // Base price for each plan (could be dynamically set based on planId if needed)
+  // Base price for each plan
   let basePrice = 0;
-  if (planId === "economy-plan") {
+  if (planId === "economy-total") {
     basePrice = 70;
-  } else if (planId === "business-plan") {
+  } else if (planId === "business-total") {
     basePrice = 80;
-  } else if (planId === "premium-plan") {
+  } else if (planId === "premium-total") {
     basePrice = 100;
-  } else if (planId === "linux-plan") {
+  } else if (planId === "linux-total) {
     basePrice = 5;
   }
 
