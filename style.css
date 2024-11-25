@@ -203,7 +203,7 @@ ul {
 .addon-options h3 {
   font-size: 1rem;
   margin-bottom: 20px;
-  color: #333;
+  color: #ff6900;
   font-weight: inherit;
 }
 
@@ -225,11 +225,6 @@ ul {
   width: 60px;
   height: 30px;
   margin-top: 5px; /* Adds a small gap between label and input */
-}
-
-.addon-options:hover {
-  border-image: linear-gradient(to right, #ff6900, #ffcf00) 1;
-  border-width: 4px;
 }
 
 .start {
