@@ -1,18 +1,18 @@
 // Declare planIds only once
-const planIds = ["economy-plan", "business-plan", "premium-plan", "linux-plan"];
+const planIds = ["economy", "business", "premium", "linux"]; // Updated to just the base names of the plans
 
 // Function to calculate the total for each plan
 function calculateTotal(planId) {
   let basePrice = 0;
 
   // Set base price depending on the planId
-  if (planId === "economy-plan") {
+  if (planId === "economy") {
     basePrice = 70;
-  } else if (planId === "business-plan") {
+  } else if (planId === "business") {
     basePrice = 80;
-  } else if (planId === "premium-plan") {
+  } else if (planId === "premium") {
     basePrice = 100;
-  } else if (planId === "linux-plan") {
+  } else if (planId === "linux") {
     basePrice = 5; // Base price for Linux Custom Plan
   }
 
@@ -47,11 +47,11 @@ function calculateTotal(planId) {
 // Add event listeners for all input fields of all plans
 planIds.forEach((planId) => {
   document
-    .querySelectorAll(`#${planId} input[type="number"]`)
+    .querySelectorAll(`#${planId}-plan input[type="number"]`) // Updated the selector to match the plan structure
     .forEach((input) => {
       input.addEventListener("input", () => {
         console.log(`Input changed for ${planId}`);
-        calculateTotal(planId);
+        calculateTotal(planId); // Trigger recalculation for the specific plan
       });
     });
 });
