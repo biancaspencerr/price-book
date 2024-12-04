@@ -13,7 +13,7 @@ function calculateTotal(planId) {
   } else if (planId === "premium") {
     basePrice = 100;
   } else if (planId === "linux") {
-    basePrice = 5; // Base price for Linux Custom Plan
+    basePrice = 0; // Base price for Linux Custom Plan
   }
 
   // Collect values from input fields based on the plan
