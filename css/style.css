@@ -55,24 +55,6 @@ body {
   justify-content: flex-start;
 }
 
-@media screen and (min-width: 700px) {
-  .grid-1-4 {
-    width: 50%;
-  }
-}
-
-@media screen and (min-width: 800px) {
-  .grid-1-4 {
-    width: 33.3333%;
-  }
-}
-
-@media screen and (min-width: 1120px) {
-  .grid-1-4 {
-    width: 20%;
-  }
-}
-
 .grid-1-4:hover {
   background-image: linear-gradient(
     to top,
@@ -144,8 +126,8 @@ sup,
 }
 
 h2 {
-  font-size: 1em;
-  font-weight: 400;
+  font-size: 1.2em;
+  font-weight: 500;
   margin: 0 0 0.5em;
 }
 
@@ -201,11 +183,13 @@ ul {
 }
 
 .addon-options h3 {
-  font-size: 1rem;
+  font-size: 16px;
   font-weight: 900;
   margin-bottom: 20px;
+  padding-bottom: 2rem;
   color: #cf2323;
   font-weight: inherit;
+  letter-spacing: 1.5;
 }
 
 .addon-option {
@@ -216,10 +200,11 @@ ul {
 }
 
 .addon-option label {
-  font-size: 1em;
+  font-size: 0.89em;
   color: #333;
   cursor: pointer;
   margin-bottom: 5px;
+  letter-spacing: 1.5;
 }
 
 .addon-option input[type="number"] {
@@ -244,5 +229,7 @@ input[type="number"] {
 }
 
 .custom {
-  /* margin-top: 11.8rem; */
+  margin-bottom: 8rem;
+  /* padding-top: 18rem; */
+  padding-bottom: 6rem;
 }
