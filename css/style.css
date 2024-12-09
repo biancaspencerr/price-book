@@ -1,5 +1,3 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:400,700,900);
-
 html {
   box-sizing: border-box;
   height: 100%;
@@ -14,7 +12,7 @@ html {
 body {
   background-color: #fff;
   color: #333;
-  font-family: "Lato", sans-serif;
+  font-family: "Montserrat Thin", sans-serif;
   font-size: 100%;
   min-height: 100%;
   line-height: 1.5;
@@ -57,22 +55,37 @@ body {
 
 .grid-1-4:hover {
   background-image: linear-gradient(
-    to top,
-    #cf2e2e 0%,
-    rgba(32, 29, 34, 1) 100%
+    to right bottom,
+    rgba(207, 46, 46, 089),
+    rgba(124, 21, 21, 0.9)
   );
-  box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 1);
   transform: scale(1.025);
   z-index: 2;
   color: #fff;
+}
+
+.grid-1-4:hover .addon-options {
+  background-image: linear-gradient(
+    top to bottom right,
+    #cf2e2e 100%,
+    #7c1515 0%
+  );
+  border-style: none;
+  transition: all 0.2s;
+}
+
+/* Hover effect for grid and addon options */
+.grid-1-4:hover .addon-options h3,
+.grid-1-4:hover .addon-option label,
+.grid-1-4:hover .addon-options p,
+.grid-1-4:hover .addon-options .list-item {
+  color: #fff; /* Change text color to white */
 }
 
 .grid-1-4:hover::before,
 .grid-1-4:hover::after {
   content: "";
   position: absolute;
-  background-color: rgb(246, 125, 53);
-  background-image: linear-gradient(to top, #cf2323 100%, #b21e1e 100%);
   top: -2px;
   bottom: -2px;
   width: 2px;
@@ -87,11 +100,11 @@ body {
 }
 
 .button {
-  background-color: #fcb900;
-  border-radius: 9px;
   color: #fff;
+  border-radius: 9px;
+  background-color: #cf2323;
   font-size: 1em;
-  font-weight: 700;
+  font-weight: 500;
   padding: 0.75em 1.5em;
   text-decoration: none;
   width: fit-content;
@@ -103,15 +116,11 @@ body {
   align-items: center;
 }
 
-.button:hover {
-  background-color: #cf2e2e;
-  background-image: linear-gradient(to left, #cf2e2e 0%, #ff6900 100%);
-}
-
+.button:hover,
 .button:active {
-  background-color: #cf2e2e;
-  background-image: linear-gradient(to left, #cf2e2e 0%, #ff6900 100%);
-  transform: scale(0.95);
+  color: #fff;
+  border-bottom: 1px solid transparent;
+  box-shadow: inset 0 0 5px #333;
 }
 
 .uppercase,
@@ -140,6 +149,9 @@ h3 {
 p {
   font-size: 1em;
   margin: 0 0 2rem;
+  color: #cf2323;
+  font-weight: 500;
+  letter-spacing: 1.5;
 }
 
 p,
@@ -164,19 +176,22 @@ ul {
   align-items: center;
   gap: 0.75em;
   letter-spacing: 1.5;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #333;
 }
 
 .list-icon {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.8rem;
+  height: 1.8rem;
   color: #ff6900;
   line-height: 1.2;
 }
 
 .addon-options {
-  background-color: #fff;
+  background-color: transparent;
   padding: 20px;
-  border-radius: 8px;
+  border-style: none;
   margin-top: 30px;
   margin-bottom: 30px;
   transition: border-image 0.3s ease;
@@ -184,7 +199,7 @@ ul {
 
 .addon-options h3 {
   font-size: 16px;
-  font-weight: 900;
+  font-weight: 600;
   margin-bottom: 20px;
   padding-bottom: 2rem;
   color: #cf2323;
@@ -201,6 +216,7 @@ ul {
 
 .addon-option label {
   font-size: 0.89em;
+  font-weight: 500;
   color: #333;
   cursor: pointer;
   margin-bottom: 5px;
