@@ -1,5 +1,5 @@
 // Declare planIds only once
-const planIds = ["economy", "business", "premium", "linux"]; // Updated to just the base names of the plans
+const planIds = ["economy", "business", "premium", "linux"]; // Include "linux" in the list
 
 // Function to calculate the total for each plan
 function calculateTotal(planId) {
@@ -17,14 +17,14 @@ function calculateTotal(planId) {
   }
 
   // Collect values from input fields based on the plan
-  const cpu = document.getElementById(`cpu-${planId}`); // Example: cpu-economy, cpu-business
-  const additionalCpu = document.getElementById(`additionalCpu-${planId}`); // Example: additionalCpu-economy, additionalCpu-business
-  const ram = document.getElementById(`ram-${planId}`); // Example: ram-economy, ram-business
-  const storage = document.getElementById(`storage-${planId}`); // Example: storage-economy, storage-business
-  const publicIp = document.getElementById(`publicIp-${planId}`); // Example: publicIp-economy, publicIp-business
-  const twoFactor = document.getElementById(`twoFactor-${planId}`); // Example: twoFactor-economy, twoFactor-business
-  const vpn = document.getElementById(`vpn-${planId}`); // Example: vpn-economy, vpn-business
-  const exchange = document.getElementById(`exchange-${planId}`); // Example: exchange-economy, exchange-business
+  const cpu = document.getElementById(`cpu-${planId}`); // Example: cpu-linux
+  const additionalCpu = document.getElementById(`additionalCpu-${planId}`); // Example: additionalCpu-linux
+  const ram = document.getElementById(`ram-${planId}`); // Example: ram-linux
+  const storage = document.getElementById(`storage-${planId}`); // Example: storage-linux
+  const publicIp = document.getElementById(`publicIp-${planId}`); // Example: publicIp-linux
+  const twoFactor = document.getElementById(`twoFactor-${planId}`); // Example: twoFactor-linux
+  const vpn = document.getElementById(`vpn-${planId}`); // Example: vpn-linux
+  const exchange = document.getElementById(`exchange-${planId}`); // Example: exchange-linux
 
   // Ensure each element exists before accessing its value
   let total = basePrice;
@@ -50,7 +50,6 @@ planIds.forEach((planId) => {
     .querySelectorAll(`#${planId}-plan input[type="number"]`) // Updated the selector to match the plan structure
     .forEach((input) => {
       input.addEventListener("input", () => {
-        console.log(`Input changed for ${planId}`);
         calculateTotal(planId); // Trigger recalculation for the specific plan
       });
     });
