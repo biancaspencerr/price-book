@@ -29,7 +29,7 @@ function calculateTotal(planId) {
   // Ensure each element exists before accessing its value
   let total = basePrice;
   total += (cpu ? parseInt(cpu.value) || 0 : 0) * 10;
-  total += (additionalCpu ? parseInt(additionalCpu.value) || 0 : 0) * 5;
+  total += (additionalCpu ? parseInt(additionalCpu.value) || 0 : 0) * 30;
   total += (ram ? parseInt(ram.value) || 0 : 0) * 1.5;
   total += (storage ? parseInt(storage.value) || 0 : 0) * 0.1;
   total += (publicIp ? parseInt(publicIp.value) || 0 : 0) * 5;
